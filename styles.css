@@ -1,49 +1,58 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
 header {
-    background-color: #0056b3;
+    background-image: url('header-footer.png'); /* Ruta de la imagen */
+            background-size: cover; /* Ajusta la imagen para cubrir todo el header */
+            background-position: center; /* Centra la imagen */
+            height: 100px; /* Ajusta la altura del header */
+    background-color: #bfbee6;
     color: #fff;
-    text-align: center;
+    display: flex;                  /* Usamos flexbox para distribuir los logos */
+    align-items: center;             /* Alinea verticalmente los elementos */
+    justify-content: space-between;  /* Distribuye los logos en los extremos */
     padding: 20px;
     position: relative;
 }
 
 header .logo {
-    max-width: 80px;
+    max-width: 300px;
+}
+
+header .logo-right {
+    max-width: 250px;
+}
+
+header .logo-center {
+    max-width: 400px;
     position: absolute;
-    left: 20px;
-    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-h1 {
-    margin: 0;
-    font-size: 24px;
-}
 
-.container {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.form-container {
+.form-container, .form-container2, .form-container3 {
+    margin: 20px auto; /* Centrado horizontal y espacio arriba/abajo */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Esquinas redondeadas */
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 20px;
-    max-width: 100%;
+    gap: 10px;
+    max-width: 1100px; /* Define un ancho máximo para que no se estiren demasiado */
+    width: 100%; /* Hace que sea responsive dentro del max-width */
+    background-color: #fff; /* Opcional: fondo para visualizar el bloque */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Opcional: sombra para destacar */
+}
+
+
+.form-container {
+    background-color: #17396a;
+}
+
+.form-container2 {
+    background-color:  #60cae1;
+}
+
+.form-container3 {
+    background-color: #eb2275;
 }
 
 .form-item {
@@ -53,13 +62,16 @@ h1 {
 
 .form-item img {
     max-width: 100%;
-    border: 2px solid #ccc;
+    height: auto;
+    /* border: 2px solid #ccc; */
     border-radius: 8px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .form-item img:hover {
     transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .form-item p {
@@ -69,10 +81,15 @@ h1 {
 }
 
 footer {
+    background-image: url('header-footer.png'); /* Ruta de la imagen */
+            background-size: cover; /* Ajusta la imagen para cubrir todo el header */
+            background-position: center; /* Centra la imagen */
+            height: 200px; /* Ajusta la altura del header */
     background-color: #bfbee6;
     text-align: center;
     padding: 10px;
     color: #fff;
+    margin-top: auto; /* Asegura que el footer esté al final */
 }
 
 footer .footer-logo {
