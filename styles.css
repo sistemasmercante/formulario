@@ -1,23 +1,27 @@
 header {
     background-image: url('header-footer.png'); /* Ruta de la imagen */
-            background-size: cover; /* Ajusta la imagen para cubrir todo el header */
-            background-position: center; /* Centra la imagen */
-            height: 100px; /* Ajusta la altura del header */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el header */
+    background-position: center; /* Centra la imagen */
+    height: 100px; /* Ajusta la altura del header */
     background-color: #bfbee6;
     color: #fff;
-    display: flex;                  /* Usamos flexbox para distribuir los logos */
-    align-items: center;             /* Alinea verticalmente los elementos */
-    justify-content: space-between;  /* Distribuye los logos en los extremos */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 20px;
     position: relative;
 }
 
 header .logo {
     max-width: 300px;
+    width: 100%; /* Hace que la imagen ocupe el 100% del ancho disponible */
+    height: auto; /* Mantiene la relación de aspecto */
 }
 
 header .logo-right {
     max-width: 250px;
+    width: 100%;
+    height: auto;
 }
 
 header .logo-center {
@@ -25,8 +29,39 @@ header .logo-center {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    width: 100%;
+    height: auto;
 }
 
+/* Ajustes para pantallas medianas */
+@media (max-width: 768px) {
+    header {
+        height: 80px; /* Reduce la altura del header */
+    }
+
+    header .logo, header .logo-right, header .logo-center {
+        max-width: 80%; /* Ajusta el tamaño de las imágenes */
+    }
+
+    header .logo-center {
+        max-width: 70%;
+    }
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 480px) {
+    header {
+        height: 60px; /* Reduce aún más la altura del header */
+    }
+
+    header .logo, header .logo-right, header .logo-center {
+        max-width: 60%; /* Ajusta el tamaño de las imágenes */
+    }
+
+    header .logo-center {
+        max-width: 50%;
+    }
+}
 
 .form-container, .form-container2, .form-container3 {
     margin: 20px auto; /* Centrado horizontal y espacio arriba/abajo */
@@ -41,7 +76,6 @@ header .logo-center {
     background-color: #fff; /* Opcional: fondo para visualizar el bloque */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Opcional: sombra para destacar */
 }
-
 
 .form-container {
     background-color: #17396a;
@@ -75,7 +109,7 @@ header .logo-center {
     /* border: 2px solid #ccc; */
     border-radius: 8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);*/
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
 }
 
 .form-item .imagen-item:hover {
@@ -116,20 +150,34 @@ header .logo-center {
 }
 
 footer {
-    /*background-image: url('header-footer.png'); /* Ruta de la imagen */
-    /*        background-size: cover; /* Ajusta la imagen para cubrir todo el header */
-    /*        background-position: center; /* Centra la imagen */
-    /*        height: 200px; /* Ajusta la altura del header */  
-    background-color: #bfbee6;
-    text-align: center;
+    background-image: url('header-footer.png'); /* Ruta de la imagen */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el footer */
+    background-position: center; /* Centra la imagen */
     padding: 10px;
     color: #fff;
+    text-align: center;
     margin-top: auto; /* Asegura que el footer esté al final */
 }
 
 footer .footer-logo {
     max-width: 500%;
     margin-top: 10px;
+    width: 100%;
+    height: auto;
+}
+
+/* Media query para pantallas de hasta 768px */
+@media (max-width: 768px) {
+    footer .footer-logo {
+        max-width: 80%; /* Ajusta el tamaño de la imagen del footer */
+    }
+}
+
+/* Media query para pantallas más pequeñas (hasta 480px) */
+@media (max-width: 480px) {
+    footer .footer-logo {
+        max-width: 60%; /* Ajuste aún mayor para pantallas pequeñas */
+    }
 }
 
 .firma {
@@ -146,83 +194,4 @@ footer .footer-logo {
 
 .firma a:hover {
     text-decoration: underline; /* Subrayado al pasar el mouse */
-}
-
-
-
-
-/* Media query para pantallas de hasta 768px (tablets y móviles) */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column; /* Apila los elementos verticalmente */
-        height: auto;
-        padding: 10px;
-    }
-
-    header .logo {
-        max-width: 80%; /* Reducción del tamaño del logo */
-        margin-bottom: 10px;
-    }
-
-    header .logo-right {
-        max-width: 80%; 
-    }
-
-    header .logo-center {
-        max-width: 100%; /* Ajuste del logo central para móviles */
-        position: static; /* Elimina la posición absoluta */
-        transform: none;
-    }
-
-    .form-container, .form-container2, .form-container3 {
-        flex-direction: column; /* Apila los elementos */
-        align-items: center;    /* Centra los ítems */
-        padding: 15px;          /* Ajuste de padding */
-    }
-
-    .form-item {
-        width: 100%; /* Ocupa el ancho completo */
-        max-width: 400px; /* Evita que se agranden demasiado */
-    }
-
-    .form-item .imagen-item,
-    .form-item .imagen-item-blanco {
-        max-width: 60%; /* Ajuste del tamaño de imágenes */
-    }
-
-    .logo-categoria {
-        max-width: 80%; /* Reducimos el tamaño del logo */
-    }
-
-    footer {
-        text-align: center; /* Asegura que el contenido se centre */
-        padding: 15px;
-    }
-
-    .firma {
-        text-align: center; /* Centra la firma en móviles */
-        margin-right: 0;   /* Elimina el margen derecho */
-    }
-}
-
-/* Media query para pantallas muy pequeñas (hasta 480px) */
-@media (max-width: 480px) {
-    header {
-        padding: 5px;
-    }
-
-    header .logo, 
-    header .logo-right, 
-    header .logo-center {
-        max-width: 100%; /* Usa el ancho completo */
-    }
-
-    .form-item .imagen-item,
-    .form-item .imagen-item-blanco {
-        max-width: 80%; /* Imágenes más grandes para mejor visibilidad */
-    }
-
-    .firma {
-        font-size: 8px; /* Reducimos aún más el tamaño de la firma */
-    }
 }
