@@ -69,7 +69,7 @@ header .logo-center {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.imagen-item-blanco {
+.form-item .imagen-item-blanco {
     max-width: 30%;
     height: auto;
     /* border: 2px solid #ccc; */
