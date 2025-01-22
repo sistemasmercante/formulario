@@ -147,3 +147,82 @@ footer .footer-logo {
 .firma a:hover {
     text-decoration: underline; /* Subrayado al pasar el mouse */
 }
+
+
+
+
+/* Media query para pantallas de hasta 768px (tablets y móviles) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Apila los elementos verticalmente */
+        height: auto;
+        padding: 10px;
+    }
+
+    header .logo {
+        max-width: 80%; /* Reducción del tamaño del logo */
+        margin-bottom: 10px;
+    }
+
+    header .logo-right {
+        max-width: 80%; 
+    }
+
+    header .logo-center {
+        max-width: 100%; /* Ajuste del logo central para móviles */
+        position: static; /* Elimina la posición absoluta */
+        transform: none;
+    }
+
+    .form-container, .form-container2, .form-container3 {
+        flex-direction: column; /* Apila los elementos */
+        align-items: center;    /* Centra los ítems */
+        padding: 15px;          /* Ajuste de padding */
+    }
+
+    .form-item {
+        width: 100%; /* Ocupa el ancho completo */
+        max-width: 400px; /* Evita que se agranden demasiado */
+    }
+
+    .form-item .imagen-item,
+    .form-item .imagen-item-blanco {
+        max-width: 60%; /* Ajuste del tamaño de imágenes */
+    }
+
+    .logo-categoria {
+        max-width: 80%; /* Reducimos el tamaño del logo */
+    }
+
+    footer {
+        text-align: center; /* Asegura que el contenido se centre */
+        padding: 15px;
+    }
+
+    .firma {
+        text-align: center; /* Centra la firma en móviles */
+        margin-right: 0;   /* Elimina el margen derecho */
+    }
+}
+
+/* Media query para pantallas muy pequeñas (hasta 480px) */
+@media (max-width: 480px) {
+    header {
+        padding: 5px;
+    }
+
+    header .logo, 
+    header .logo-right, 
+    header .logo-center {
+        max-width: 100%; /* Usa el ancho completo */
+    }
+
+    .form-item .imagen-item,
+    .form-item .imagen-item-blanco {
+        max-width: 80%; /* Imágenes más grandes para mejor visibilidad */
+    }
+
+    .firma {
+        font-size: 8px; /* Reducimos aún más el tamaño de la firma */
+    }
+}
