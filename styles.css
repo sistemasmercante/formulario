@@ -69,6 +69,15 @@ header .logo-center {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.imagen-item-blanco {
+    max-width: 30%;
+    height: auto;
+    /* border: 2px solid #ccc; */
+    /*border-radius: 8px;*/
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);*/
+}
+
 .form-item .imagen-item:hover {
     transform: scale(1.1);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
