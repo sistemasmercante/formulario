@@ -60,8 +60,8 @@ header .logo-center {
     width: 200px;
 }
 
-.form-item img {
-    max-width: 100%;
+.form-item .imagen-item {
+    max-width: 30%;
     height: auto;
     /* border: 2px solid #ccc; */
     border-radius: 8px;
@@ -69,7 +69,21 @@ header .logo-center {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.form-item img:hover {
+.form-item .imagen-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.logo-categoria {
+    max-width: 300px; /* Ajusta el tamaño del logo de categoría */
+    height: auto;
+    margin-bottom: 10px; /* Espaciado inferior para separar del siguiente elemento */
+    border-radius: 8px; /* Opcional: esquinas redondeadas */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+}
+
+.logo-categoria:hover {
     transform: scale(1.1);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
@@ -78,13 +92,25 @@ header .logo-center {
     margin-top: 10px;
     font-size: 16px;
     font-weight: bold;
+    font-family: 'Roboto', sans-serif; /* Aplica la fuente Roboto */
+}
+
+/* Color de texto para el primer contenedor */
+.form-container .form-item p {
+    color: #a1a9f1; /* Color específico para el primer container */
+}
+
+/* Color de texto para los demás contenedores */
+.form-container2 .form-item p,
+.form-container3 .form-item p {
+    color: #070e50; /* Color original para los otros contenedores */
 }
 
 footer {
-    background-image: url('header-footer.png'); /* Ruta de la imagen */
-            background-size: cover; /* Ajusta la imagen para cubrir todo el header */
-            background-position: center; /* Centra la imagen */
-            height: 200px; /* Ajusta la altura del header */
+    /*background-image: url('header-footer.png'); /* Ruta de la imagen */
+    /*        background-size: cover; /* Ajusta la imagen para cubrir todo el header */
+    /*        background-position: center; /* Centra la imagen */
+    /*        height: 200px; /* Ajusta la altura del header */  
     background-color: #bfbee6;
     text-align: center;
     padding: 10px;
@@ -93,6 +119,22 @@ footer {
 }
 
 footer .footer-logo {
-    max-width: 100%;
+    max-width: 500%;
     margin-top: 10px;
+}
+
+.firma {
+    font-size: 10px;   /* Tamaño pequeño de fuente */
+    color: #8282f0;    /* Color azul */
+    text-align: right; /* Justificado a la derecha */
+    margin-right: 20px; /* Espaciado desde el borde derecho */
+}
+
+.firma a {
+    color: #8282f0;     /* Asegura que el enlace sea azul */
+    text-decoration: none; /* Quita el subrayado predeterminado */
+}
+
+.firma a:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
 }
